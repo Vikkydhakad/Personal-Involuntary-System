@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: rgb(41, 41, 247);
+            }
+
+            header {
+                background-color: black;
+                color: grey;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .heading {
+                color: white;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline-block;
+                margin-left: 10px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: grey;
+                position: relative;
+                font-size: 1.4rem;
+                transition: color 0.3s, border-bottom-color 0.3s;
+            }
+
+            nav ul li a:hover {
+                color: white;
+            }
+
+            nav ul li a::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                bottom: -2px;
+                left: 0;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s;
+            }
+
+            nav ul li a:hover::before {
+                transform: scaleX(1);
+            }
+            .sidebar {
+                background-color: black;
+                color: grey;
+                padding: 10px;
+                width: 20%;
+                float: left;
+                visibility:hidden
+            }
+
+
+            .sidebar-menu {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            .sidebar-menu li {
+                margin-bottom: 15px;
+            }
+
+            .sidebar-menu li a {
+                text-decoration: none;
+                color: rgb(13, 193, 248);
+                font-size: 1.5rem;
+            }
+
+            #formdiv{
+                width: 70%;
+                float: left;
+                margin-left: 5%;
+                background-color: blue;
+                font-size: 1.4rem;
+                margin-top: 8%;
+            }
+            #formdiv fieldset table{
+                color: white;
+            }
+
+            @media (max-width: 600px) {
+                header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                nav {
+                    margin-top: 10px;
+                }
+
+                nav ul li {
+                    display: block;
+                    margin: 10px 0;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="heading">
+                <font color="lightblue">Personal </font><br />Inventory System
+            </h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="HomeNotLogin">Home</a></li>
+                    <li><a href="RegisterUserHTML" ><font color="white"><u>Register User</u></font></a></li>
+                    <li><a href="UsersLogin">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <center>
+                    <li><a href="#">Expenses Category</a></li>
+                </center>
+                <center>
+                    <li><a href="#">Income Category</a></li>
+                </center>
+                <center>
+                    <li><a href="#">Expenses</a></li>
+                </center>
+                <center>
+                    <li><a href="#">Income</a></li>
+                </center>
+                <center>
+                    <li><a href="#">Cash Book</a></li>
+                </center>
+                <center>
+                    <li><a href="#">Bank Book</a></li>
+                </center>
+                <center>
+                    <li><a href="#">Day Book</a></li>
+                </center>
+                <center>
+                    <li><a href="#">Balance</a></li>
+                </center>
+            </ul>
+        </div>
+        <div id="formdiv">
+            <form action="ReisterUser">
+                <fieldset>
+                    <legend>USER REGISTRATION</legend>
+                    <table>
+                        <tr>
+                            <td>Name :</td>
+                            <td><input type="text" name="name" id="" /></td>
+                        </tr>
+                        <tr>
+                            <td>UserName :</td>
+                            <td><input type="text" name="username" id="" /></td>
+                        </tr>
+                        <tr>
+                            <td>Password :</td>
+                            <td><input type="password" name="password" id="" /></td>
+                            <td id="warning"></td>
+                        </tr>
+                        <tr>
+                            <td>ConfirmPassword :</td>
+                            <td><input type="text" name="password" id="" /></td>
+                        </tr>
+                        <tr>
+                            <td>PhoneNo :</td>
+                            <td><input type="text" name="phoneno" id="" /></td>
+                        </tr>
+                        <tr>
+                            <td>EmailId: :</td>
+                            <td><input type="text" name="emailid" id="" /></td>
+                        </tr>
+                        <tr>
+                            <td>Address :</td>
+                            <td><input type="text" name="address" id="" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" name="" id="" value="submit" /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

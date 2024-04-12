@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: rgb(41, 41, 247);
+            }
+
+            header {
+                background-color: black;
+                color: grey;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .heading {
+                color: white;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline-block;
+                margin-left: 10px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: grey;
+                position: relative;
+                font-size: 1.4rem;
+                transition: color 0.3s, border-bottom-color 0.3s;
+            }
+
+            nav ul li a:hover {
+                color: white;
+            }
+
+            nav ul li a::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                bottom: -2px;
+                left: 0;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s;
+            }
+
+            nav ul li a:hover::before {
+                transform: scaleX(1);
+            }
+            .sidebar {
+                background-color: black;
+                color: grey;
+                padding: 10px;
+                width: 20%;
+                float: left;
+            }
+
+            .sidebar-heading {
+                color: rgb(243, 240, 240);
+                margin-top: 5%;
+                margin-left: 3%;
+                font-size: 1.5rem;
+            }
+
+            .sidebar-menu {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            .sidebar-menu li {
+                margin-bottom: 15px;
+            }
+
+            .sidebar-menu li a {
+                text-decoration: none;
+                color: rgb(13, 193, 248);
+                font-size: 1.5rem;
+            }
+            .sidebar-menu li a:hover{
+                color:white;
+            }
+
+            #formdiv{
+                width: 70%;
+                float: left;
+                margin-left: 5%;
+                background-color: blue;
+                font-size: 1.4rem;
+                float:left;
+                box-shadow: 1px 1px 2px black;
+                height:50vh;
+            }
+            
+            @media (max-width: 600px) {
+                header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                nav {
+                    margin-top: 10px;
+                }
+
+                nav ul li {
+                    display: block;
+                    margin: 10px 0;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="heading">
+                <font color="lightblue">Personal </font><br />Inventory System
+            </h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="UserProfile">Profile</a></li>
+                    <li><a href="UpdateUserProfile">Update Profile</a></li>
+                    <li><a href="UsersLogin">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2 class="sidebar-heading">Master</h2>
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <center>
+                    <li><a href="ExpensesCategoryAdd">Expenses Category</a></li>
+                </center>
+                <center>
+                    <li><a href="IncomeCategoryAdd">Income Category</a></li>
+                </center>
+                <center>
+                    <li><a href="Expenses">Expenses</a></li>
+                </center>
+                <center>
+                    <li><a href="Income">Income</a></li>
+                </center>
+                <center>
+                    <li><a href="CashBook">Cash Book</a></li>
+                </center>
+                <center>
+                    <li><a href="BankBook">Bank Book</a></li>
+                </center>
+                <center>
+                    <li><a href="DayBook">Day Book</a></li>
+                </center>
+                <center>
+                    <li><a href="BalanceSheet">Balance</a></li>
+                </center>
+            </ul>
+        </div>
+        <div id="formdiv"></div>
+    </body>
+</html>
